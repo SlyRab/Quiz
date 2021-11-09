@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,11 +15,11 @@ public class TileData
     public Sprite Sprite => _sprite;
 }
 
-[CreateAssetMenu(fileName ="New TuleBundleData", menuName = "Tile Bundle Data", order = 10)]
+[CreateAssetMenu(fileName = "New TileBundleData", menuName = "Tule Bundle Data", order = 10)]
 public class TileBundleData : ScriptableObject
 {
     [SerializeField]
     private TileData[] _tileData;
 
-    public TileData[] TileData => _tileData;
+    public TileData[] TileData { get { return _tileData; } }
 }
